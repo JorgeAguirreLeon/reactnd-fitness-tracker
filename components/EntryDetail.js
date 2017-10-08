@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
-import {connect} from 'react-redux'
-import {white} from '../utils/colors'
-import MetricCard from './MetricCard'
-import {addEntry} from '../actions'
-import {removeEntry} from '../utils/api'
-import {timeToString, getDailyReminderValue} from '../utils/helpers'
-import TextButton from './TextButton'
+import React, { Component }                   from 'react'
+import { View, Text, StyleSheet }             from 'react-native'
+import {connect}                              from 'react-redux'
+import {white}                                from '../utils/colors'
+import MetricCard                             from './MetricCard'
+import {addEntry}                             from '../actions'
+import {removeEntry}                          from '../utils/api'
+import {timeToString, getDailyReminderValue}  from '../utils/helpers'
+import TextButton                             from './TextButton'
 
 class EntryDetail extends Component {
   static navigationOptions = ({navigation})=> {
