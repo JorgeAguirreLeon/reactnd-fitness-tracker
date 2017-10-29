@@ -1,6 +1,7 @@
 import React, { Component }                                         from 'react'
 import { View, TouchableOpacity, Text, StyleSheet, Platform }       from 'react-native'
 import { getMetricMetaInfo, timeToString, getDailyReminderValue }   from '../utils/helpers'
+import { clearLocalNotification, setLocalNotification }             from '../utils/helpers'
 import UdaciSlider                                                  from './UdaciSlider'
 import UdaciSteppers                                                from './UdaciSteppers'
 import DateHeader                                                   from './DateHeader'
@@ -71,6 +72,8 @@ class AddEntry extends Component {
     // Save to DB
     submitEntry({key, entry})
     // Clear local notification
+    clearLocalNotification()
+      .then(setLocalNotification)
   }
 
   reset = ()=> {
